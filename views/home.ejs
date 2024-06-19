@@ -1,0 +1,16 @@
+<%- include("partials/header") -%>
+    <h1>Home</h1>
+    <p>
+        <%= homeStartingContent %>
+    </p>
+
+    <% for (let [key, value] of posts) { %>
+        <h2>
+            <%= key %>
+        </h2>
+        <p>
+            <%= value.slice(0 , 100) %> ...
+                <a href="/posts/<%=value %>">Read More</a>
+        </p>
+        <% } %>
+            <%- include("partials/footer") -%>
